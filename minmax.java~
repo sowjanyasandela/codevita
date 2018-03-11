@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class minmax
+{
+	public static void main(String args[])
+	{
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t>0)
+		{
+			int cost,i,j=0,k=0;
+			int n = s.nextInt();
+			int a[] = new int[n];
+			for(i=0;i<n;i++)
+				a[i] = s.nextInt();
+			while(a.length>1)
+			{
+				if(a[k]<a[k+1])
+				{
+					start=k+1;
+					cost=cost+a[k];
+				}
+				else
+				{
+					start=k;
+					cost=cost+a[k+1];
+				}
+				for(j=start;j<a.length-1;j++)
+					a[j]=a[j+1];
+				a.length=a.length-1;
+			}
+			t=t-1;
+		}
+	}
+}
+		

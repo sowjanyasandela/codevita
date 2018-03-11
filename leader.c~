@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+	int n,p1,p2,largest=0,leader,lead;
+	scanf("%d",&n);
+	while(n--)
+	{
+		scanf("%d%d",&p1,&p2);
+		if(p1>p2)
+		{
+			lead=p1-p2;
+			if(lead>largest)
+			{
+				largest=lead;
+				leader=1;
+			}
+		}
+		else
+		{
+			lead=p2-p1;
+			if(lead>largest)
+			{
+				largest=lead;
+				leader=2;
+			}
+		}
+	}
+	printf("%d %d\n",leader,largest);
+
+return 0; 
+}
+		
+		
+		

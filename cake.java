@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class cake
+{
+	public static void main(String args[])
+	{
+		Scanner s = new Scanner(System.in);
+		int t = s.nextInt();
+		while(t>0)
+		{
+			String str=s.next();
+			int len = str.length();
+			int i=0,j,k=0;
+			int a[] =new int[26];
+			while(len>0)
+			{
+				i=str.charAt(len-1)-97;
+				a[i]=a[i]+1;
+				len=len-1;
+			}
+			for(j=0;j<a.length;j++)
+			{
+				if(a[j]==(str.length()/2) && (str.length()%2==0))
+				{
+					k=k+1;
+					break;
+				}
+			}
+			if(k==1)
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+			t=t-1;
+		}	
+	}
+}

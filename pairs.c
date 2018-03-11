@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+	int t,i;
+	scanf("%d",&t);
+	while(t--)
+	{
+		int n;
+		int b[100001]={0};
+		scanf("%d",&n);
+		int a[n];
+		for(i=0;i<n;i++)
+		{
+			scanf("%d",&a[i]);
+			b[a[i]]++;
+		}
+		for(i=0;i<n;i++)
+		{
+			if(b[a[i]]%2!=0)
+			{
+				printf("%d\n",a[i]);
+				break;
+			}
+				
+		}
+	}
+}
+		
+		

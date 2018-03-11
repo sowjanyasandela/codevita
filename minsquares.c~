@@ -1,0 +1,25 @@
+#include<stdio.h>
+main()
+{
+	int t,max,min;
+	scanf("%d",&t);
+	while(t--)
+	{
+		int l,b;
+		scanf("%d%d",&l,&b);
+		if(l<b)
+		{
+			max=b;
+			min=l;
+		}
+		else
+		{
+			max=l;
+			min=b;
+		}
+		max=max-min;
+		int total=min/max;
+		int total1=total+(total*total);
+		printf("%d\n",total1);
+	}
+}	
